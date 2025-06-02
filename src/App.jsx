@@ -11,28 +11,21 @@ function App() {
   const [entryArray, setEntryArray] = useState([1, 1, 1, 1, 1, 1, 1, 1, 1, 1]);
   const [showNewEntryForm, setshowNewEntryForm] = useState(false);
 
-  function newEntryFormModalOpener() {
-    setshowNewEntryForm(!showNewEntryForm);
-
-    console.log(showNewEntryForm);
-  }
 
   return (
     <div className="h-screen">
-      {!showNewEntryForm &&
+  
         <div>
-          <Header newEntryFormModalOpener={newEntryFormModalOpener} />
+          <Header/>
           <div className="flex h-full  md:justify-center relative">
             <div className="max-md:hidden h-full">
-              <SideBar newEntryFormModalOpener={newEntryFormModalOpener} />
+              <SideBar/>
             </div>
             <SortButton />
             <ListDisplay array={entryArray} />
           </div>
         </div>
-      }
-      {/* <EntryDisplay/>  */}
-      {showNewEntryForm && <NewEntryForm />}
+<NewEntryForm/>
     </div>
   );
 }

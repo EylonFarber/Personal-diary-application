@@ -1,9 +1,11 @@
 import React from 'react'
 
-export default function NewEntryButton({newEntryFormModalOpener}) {
-
-
+export default function NewEntryButton() {
   return (
-        <button onClick={newEntryFormModalOpener} className="btn w-[100px]">New entry</button>
-     )
+    <button
+      className="btn"
+      onClick={() => document.getElementById("my_modal_1").showModal()}
+    >
+      New entry
+    </button>  )
 }

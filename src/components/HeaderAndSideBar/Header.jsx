@@ -1,4 +1,5 @@
 import React from "react";
+import NewEntryForm from "../NewEntryForm";
 import NewEntryButton from "./NewEntryButton";
 
 export default function Header({newEntryFormModalOpener}) {
@@ -20,7 +21,7 @@ export default function Header({newEntryFormModalOpener}) {
       <div className="w-full flex gap-2 justify-end items-center">
         <p>{date.toLocaleDateString()}</p>
         <div className="md:hidden">
-          <NewEntryButton newEntryFormModalOpener={newEntryFormModalOpener} />
+          <NewEntryButton/>
         </div>
       </div>
     </div>
